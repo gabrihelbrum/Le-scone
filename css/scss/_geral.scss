@@ -1,0 +1,34 @@
+body {
+  background: $cor-fundo;
+  border: 10px solid $cor-borda;
+  color: $cor-letra2;
+  @include d(s) {
+    border: none;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+p {
+  @include tipo-1(18);
+}
+.titulo {
+  @include tipo-1(18);
+  text-transform: uppercase;
+  @include d(s) {
+    margin-bottom: 40px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 2px;
+    float: right;
+    background: $cor-letra2;
+    margin-top: 14px;
+    @include d(m) {
+      width: 60%;
+    }
+  }
+}

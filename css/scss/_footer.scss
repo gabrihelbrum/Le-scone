@@ -1,0 +1,18 @@
+footer {
+  padding: 20px 0;
+  background: $cor-letra2;
+  @include box-shadow(0 0 0 10px $cor-letra2);
+  p {
+    color: $cor-fundo;
+  }
+  @include d(s) {
+    text-align: center;
+  }
+}
+a img {
+  float: right;
+  @include d(s) {
+    float: none;
+    margin: 20px auto;
+  }
+}

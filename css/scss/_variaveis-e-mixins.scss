@@ -1,0 +1,37 @@
+// cores
+$cor-fundo: #edece4;
+$cor-borda: #cbc6b9;
+$cor-letra1: #988c77;
+$cor-letra2: #2a2426;
+$cor-aberto: #1ab912;
+
+// fontes
+$font-1: "PT Mono", monospace;
+$font-2: "Aref Ruqaa", serif;
+
+// mixin
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto + em;
+}
+@mixin tipo-1($size) {
+  font-family: $font-1;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+}
+@mixin tipo-2($size) {
+  font-family: $font-2;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  } @else if $size == 24 {
+    font-size: em(24);
+    line-height: em(30, 24);
+  }
+}
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
