@@ -5,6 +5,12 @@
     margin-top: 60px;
     margin-bottom: 60px;
   }
+  .contato-mapa {
+    display: block;
+    width: 100%;
+    @include box-shadow(0 0 0 10px $cor-borda);
+    clear: both;
+  }
 }
 .contato form {
   label {
@@ -47,23 +53,20 @@ input.button {
     @include box-shadow(3px 3px 0 -2px$cor-borda, 3px 3px 0 0 $cor-letra1);
   }
 }
-.contato-info{
+.contato-info {
   display: inline-block;
   color: $cor-letra1;
   margin-top: 2em;
   margin-bottom: 3em;
-  @include d(l){
+  @include d(l) {
     float: right;
-  text-align: right;
-  margin-top: -3em;
+    text-align: right;
+    margin-top: -3em;
   }
 }
-.contato-mapa{
+.contato-mapa {
   display: block;
-@include box-shadow(0 0 0 10px $cor-borda);
-clear: both;
-img{
   width: 100%;
-}
-
+  @include box-shadow(0 0 0 10px $cor-borda);
+  clear: both;
 }
